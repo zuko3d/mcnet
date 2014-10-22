@@ -17,14 +17,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'bw_yb_ba)s8&$_d+)41rwa1ibg-*!@cv^^s(#btpp$_qay854#'
+SECRET_KEY = 'bw_yb_ba)s8&$_d+)43rwa1ibg-*!@cv^^s(#btpp$_qay854#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -72,13 +72,13 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = True 
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -86,7 +86,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/home/django/mcnet/public/media/'
+MEDIA_ROOT = '/home/django/dbg_mcnet/public/media/'
 MEDIA_URL = '/media/'
 
 TEMPLATE_LOADERS = (
@@ -94,7 +94,7 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
 )
-TEMPLATE_DIRS = ('/home/django/mcnet/templates',
+TEMPLATE_DIRS = ('/home/django/dbg_mcnet/templates',
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
