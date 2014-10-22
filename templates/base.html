@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8" /><title>{% block title %}MTG Collection{% endblock %}</title>
+<meta name="keywords" content="mtg, magic, magic the gathering, collecting, cards, board games" /> 
+<meta name="description" content="Magic: the Gathering Collections" /> 
+<meta http-equiv="Content-Type" content="text/html" />
+<meta name="author" content="Dmitriy Shalyga, Irina Samonova" />
+<meta name="document-state" content="Dynamic" />
+
+<style type="text/css">
+	a:link {color:#ffffff;}
+	a:visited {color: #ffffff;}
+	
+	body {
+		color: #ffffff;
+		background-color: #000000;
+		background-size: cover; 
+	}
+	table{
+		border:0px; 
+		border-collapse:collapse;
+	}
+</style>
+
+<html style="height: 100%;width: 100%;">
+<body style="height: 100%;width: 100%; margin:0;padding:0" background="/static/bg_uc.jpg">
+<table style="height: 100%;width: 100%;">
+<tr style="height: 40px;width: 100%"><td>
+{% block header %}
+<table style="height: 100%;width: 100%;">
+<tr style="height: 100%;width: 100%;">
+<td style="height: 100%;width: 100%;">
+</td>
+<td style="height: 100%;width: 50px;">
+{{ login_text|safe}}
+</td>
+</tr>
+</table>
+{% endblock %}
+</td></tr>
+<tr><td style="height: 100%;width: 100%;">
+{% block contents %}
+Contents block
+{% endblock %}
+</td>
+<tr><td></td></tr>
+<tr></tr>
+</table>
+</body>
+</html>

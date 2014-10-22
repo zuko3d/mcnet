@@ -1,0 +1,74 @@
+[Mon Oct 13 00:49:17 2014] [error] [client 127.0.0.1] mod_wsgi (pid=11833): Target WSGI script '/home/django/mcnet/mcnet.wsgi' cannot be loaded as Python module.
+[Mon Oct 13 00:49:17 2014] [error] [client 127.0.0.1] mod_wsgi (pid=11833): Exception occurred processing WSGI script '/home/django/mcnet/mcnet.wsgi'.
+[Mon Oct 13 00:49:17 2014] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Oct 13 00:49:17 2014] [error] [client 127.0.0.1]   File "/home/django/mcnet/mcnet.wsgi", line 25, in <module>
+[Mon Oct 13 00:49:17 2014] [error] [client 127.0.0.1]     import django.core.handlers.wsgi
+[Mon Oct 13 00:49:17 2014] [error] [client 127.0.0.1] ImportError: No module named django.core.handlers.wsgi
+[Mon Oct 13 00:49:42 2014] [error] [client 127.0.0.1] mod_wsgi (pid=11833): Target WSGI script '/home/django/mcnet/mcnet.wsgi' cannot be loaded as Python module.
+[Mon Oct 13 00:49:42 2014] [error] [client 127.0.0.1] mod_wsgi (pid=11833): Exception occurred processing WSGI script '/home/django/mcnet/mcnet.wsgi'.
+[Mon Oct 13 00:49:42 2014] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Oct 13 00:49:42 2014] [error] [client 127.0.0.1]   File "/home/django/mcnet/mcnet.wsgi", line 25, in <module>
+[Mon Oct 13 00:49:42 2014] [error] [client 127.0.0.1]     import django.core.handlers.wsgi
+[Mon Oct 13 00:49:42 2014] [error] [client 127.0.0.1] ImportError: No module named django.core.handlers.wsgi
+[Mon Oct 13 00:52:57 2014] [error] No handlers could be found for logger "django.request"
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1] mod_wsgi (pid=11942): Exception occurred processing WSGI script '/home/django/mcnet/mcnet.wsgi'.
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/core/handlers/wsgi.py", line 187, in __call__
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     response = self.get_response(request)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/core/handlers/base.py", line 199, in get_response
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     response = self.handle_uncaught_exception(request, resolver, sys.exc_info())
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/core/handlers/base.py", line 236, in handle_uncaught_exception
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return debug.technical_500_response(request, *exc_info)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/views/debug.py", line 91, in technical_500_response
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     html = reporter.get_traceback_html()
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/views/debug.py", line 350, in get_traceback_html
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return t.render(c)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/template/base.py", line 148, in render
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return self._render(context)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/template/base.py", line 142, in _render
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return self.nodelist.render(context)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/template/base.py", line 844, in render
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     bit = self.render_node(node, context)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/template/debug.py", line 80, in render_node
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return node.render(context)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/template/debug.py", line 90, in render
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     output = self.filter_expression.resolve(context)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/template/base.py", line 624, in resolve
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     new_obj = func(obj, *arg_vals)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/template/defaultfilters.py", line 769, in date
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return format(value, arg)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/dateformat.py", line 343, in format
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return df.format(format_string)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/dateformat.py", line 35, in format
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     pieces.append(force_text(getattr(self, piece)()))
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/dateformat.py", line 268, in r
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return self.format('D, j M Y H:i:s O')
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/dateformat.py", line 35, in format
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     pieces.append(force_text(getattr(self, piece)()))
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/encoding.py", line 85, in force_text
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     s = six.text_type(s)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/functional.py", line 144, in __text_cast
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return func(*self.__args, **self.__kw)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/translation/__init__.py", line 83, in ugettext
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return _trans.ugettext(message)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/translation/trans_real.py", line 325, in ugettext
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     return do_translate(message, 'ugettext')
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/translation/trans_real.py", line 306, in do_translate
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     _default = translation(settings.LANGUAGE_CODE)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/translation/trans_real.py", line 209, in translation
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     default_translation = _fetch(settings.LANGUAGE_CODE)
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]   File "/home/django/lib/python2.7/site-packages/django/utils/translation/trans_real.py", line 189, in _fetch
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1]     "The translation infrastructure cannot be initialized before the "
+[Mon Oct 13 00:52:57 2014] [error] [client 127.0.0.1] AppRegistryNotReady: The translation infrastructure cannot be initialized before the apps registry is ready. Check that you don't make non-lazy gettext calls at import time.
+[Mon Oct 13 00:55:48 2014] [error] [client 127.0.0.1] mod_wsgi (pid=12045): Target WSGI script '/home/django/mcnet/mcnet/wsgi.py' cannot be loaded as Python module.
+[Mon Oct 13 00:55:48 2014] [error] [client 127.0.0.1] mod_wsgi (pid=12045): Exception occurred processing WSGI script '/home/django/mcnet/mcnet/wsgi.py'.
+[Mon Oct 13 00:55:48 2014] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Oct 13 00:55:48 2014] [error] [client 127.0.0.1]   File "/home/django/mcnet/mcnet/wsgi.py", line 13, in <module>
+[Mon Oct 13 00:55:48 2014] [error] [client 127.0.0.1]     from django.core.wsgi import get_wsgi_application
+[Mon Oct 13 00:55:48 2014] [error] [client 127.0.0.1] ImportError: No module named django.core.wsgi
+[Mon Oct 13 00:55:51 2014] [error] [client 127.0.0.1] mod_wsgi (pid=12045): Target WSGI script '/home/django/mcnet/mcnet/wsgi.py' cannot be loaded as Python module.
+[Mon Oct 13 00:55:51 2014] [error] [client 127.0.0.1] mod_wsgi (pid=12045): Exception occurred processing WSGI script '/home/django/mcnet/mcnet/wsgi.py'.
+[Mon Oct 13 00:55:51 2014] [error] [client 127.0.0.1] Traceback (most recent call last):
+[Mon Oct 13 00:55:51 2014] [error] [client 127.0.0.1]   File "/home/django/mcnet/mcnet/wsgi.py", line 13, in <module>
+[Mon Oct 13 00:55:51 2014] [error] [client 127.0.0.1]     from django.core.wsgi import get_wsgi_application
+[Mon Oct 13 00:55:51 2014] [error] [client 127.0.0.1] ImportError: No module named django.core.wsgi
