@@ -73,3 +73,9 @@ def MainPage(rq):
 	login_text = login_info(rq)
 	ret = HttpResponse(t.render(Context({'login_text':login_text})))
 	return ret
+
+def register(rq):
+	t = get_template("index.html")
+	login_text = login_info(rq)
+	ret = HttpResponse(t.render(Context({'login_text':login_text})))
+	return ret;
