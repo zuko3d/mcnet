@@ -19,7 +19,7 @@ sys.path[:0] = new_sys_path
 
 # this will also be different for each project!
 sys.path.append('/home/django/dbg_mcnet/mcnet')
-sys.path.append('/home/django/dbg_mcnet')
+sys.path.append('/home/django/dbg_mcnet') 
 os.environ['PYTHON_EGG_CACHE'] = '/home/django/.python-eggs'
 os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 import django.core.handlers.wsgi

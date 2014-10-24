@@ -75,7 +75,8 @@ def MainPage(rq):
 	return ret
 
 def register(rq):
-	t = get_template("index.html")
+	t = get_template("fb.html")
 	login_text = login_info(rq)
-	ret = HttpResponse(t.render(Context({'login_text':login_text})))
+	ses = rq.session.items()
+	ret = HttpResponse(t.render(Context({'login_text':login_text, 'ses':ses, 'request':rq})))
 	return ret;
