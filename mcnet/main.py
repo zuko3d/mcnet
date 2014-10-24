@@ -44,7 +44,7 @@ def sanify(s):
 
 def login_info(rq):
 	if not ("logged" in rq.session):
-		return '<table><tr><td><form action="/login" method="get"></td></tr><tr><td><input type="text" placeholder="Login" name="login"></input></td></tr><tr><td><input type="text" placeholder="Password" name="pass"></input></td></tr><tr><td><table><tr><td><input type="submit" value="Login"></td></form><form action="/register" method="get"><td><input type="submit" value="Register"></td></tr></table></form></table>'
+		return '<table><tr><td><a href="/accounts/login">Login</a></td></tr></table>'
 	else:
 		return '<table><tr><td>Logged as ' + rq.session['logged'] + '</td></tr><tr><td><form action="/logout" method="get"><input type="submit" value="Logout"></form></td></tr></table>'
 	
@@ -64,8 +64,8 @@ def login(rq):
 	return ret
 
 def logout(rq):
-	rq.session.flush()
-	ret = HttpResponseRedirect("/")
+	#rq.session.flush()
+	ret = HttpResponseRedirect("/accounts/logout")
 	return ret
 
 def MainPage(rq):
