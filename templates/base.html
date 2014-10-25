@@ -11,43 +11,84 @@
 	a:link {color:#ffffff;}
 	a:visited {color: #ffffff;}
 	
+	html {
+		min-width: 1000px;
+	}
 	body {
 		color: #ffffff;
 		background-color: #000000;
 		background-size: cover; 
+		height:100%;
+		width:100%;
+		font-family: Arial;
+		text-align:center;
 	}
 	table{
 		border:0px; 
 		border-collapse:collapse;
+		height:100%;
+		width:100%;
+	}
+	tr{
+		height:100%;
+		width:100%;
+	}
+	td{
+		height:100%;
+		width:100%;
+	}
+	
+	.hdrButton{
+		height:42px;
+		max-height:42px;
+	}
+	.topbar{
+		height:40px;
+		width:100%;
+		display: block;
+		text-align:center;
+	}
+	.topbar_wrapper{
+		width:940px;
+		position: relative;
+		margin: 0 auto;
+		text-align:left;
+	}
+	.topbar_link{
+		min-width: 100px;
+		display: table-cell;
 	}
 </style>
 
 <html style="height: 100%;width: 100%;">
-<body style="height: 100%;width: 100%; margin:0;padding:0" background="/static/bg_uc.jpg">
-<table style="height: 100%;width: 100%;">
-<tr style="height: 42px;width: 100%"><td>
+<body style="margin:0;padding:0" background="/static/bg_uc.jpg">
 {% block header %}
-<table style="height: 100%;width: 100%;">
-<tr style="height: 100%;width: 100%;">
-<td style="height: 100%;width: 100%;">
-</td>
-<td style="height: 100%;width: 50px;">
+<div class="topbar">
+<div class="topbar_wrapper">
+<div class="topbar_link">
+<a href="/">Main Page</a>
+</div>
+<div class="topbar_link">
+<a href="/cbase">Card Base</a>
+</div>
+<div class="topbar_link">
 {{ login_text|safe}}
-</td>
-</tr>
-</table>
+</div>
+<div class="topbar_link">
+Search will be here...
+</div>
+</div>
+</div>
 {% endblock %}
-</td></tr>
-<tr><td style="height: 100%;width: 100%;">
+<table id="content">
+<tr align="center"><td style="width: 940px;" valign="top">
 {% block contents %}
 Contents block
 {% endblock %}
 {% block content %}
 Content block
 {% endblock %}
-</td>
-<tr><td></td></tr>
-<tr></tr>
+</td></tr>
 </table>
 </body>
 </html>

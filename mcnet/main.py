@@ -43,10 +43,10 @@ def sanify(s):
 	return result
 
 def login_info(rq):
-	if not ("logged" in rq.session):
-		return '<table><tr><td><a href="/accounts/login">Login</a></td></tr></table>'
+	if not ("_auth_user_id" in rq.session):
+		return '<a href="/accounts/login">Login</a>'
 	else:
-		return '<table><tr><td>Logged as ' + rq.session['logged'] + '</td></tr><tr><td><form action="/logout" method="get"><input type="submit" value="Logout"></form></td></tr></table>'
+		return '<table><tr><td>Logged as ' + rq.user.username + '</td></tr><tr><td><form action="/logout" method="get"><input type="submit" value="Logout"></form></td></tr></table>'
 	
 def login(rq):
 	ret = HttpResponseRedirect("/")
@@ -78,5 +78,13 @@ def register(rq):
 	t = get_template("fb.html")
 	login_text = login_info(rq)
 	ses = rq.session.items()
-	ret = HttpResponse(t.render(Context({'login_text':login_text, 'ses':ses, 'request':rq})))
+	uname = rq.user.username
+	ret = HttpResponse(t.render(Context({'login_text':login_text, 'ses':ses, 'request':rq, 'uname':uname})))
+	return ret;
+
+def cbase(rq):
+	t = get_template("card_base.html")
+	login_text = login_info(rq)
+	
+	ret = HttpResponse(t.render(Context({'login_text':login_text, 'request':rq})))
 	return ret;
