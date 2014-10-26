@@ -127,6 +127,8 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+#AUTH_USER_MODEL = 'mcnet.CustomUser'
+
 SOCIALACCOUNT_PROVIDERS = {'facebook':
        {'SCOPE': ['email', 'publish_stream'],
         'AUTH_PARAMS': { },

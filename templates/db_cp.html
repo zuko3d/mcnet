@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block contents %}
+{% if request.user.is_superuser == False %}
+Access denied!
+{% else %}
+CP will be here...
+{% endif %}
+{% endblock %}

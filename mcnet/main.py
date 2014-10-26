@@ -34,6 +34,18 @@ def encrypt(str):
 		i = i + 1 
 	return ret
 
+def mspam(str):
+	tmp = mspamlogs()
+	tmp.text = str
+	tmp.date = datetime.datetime.now()
+	tmp.save()
+
+def mlog(str):
+	tmp = MLogs()
+	tmp.text = str
+	tmp.date = datetime.datetime.now()
+	tmp.save()
+
 def sanify(s):
 	result = ""
 	ascs = asc(s)
@@ -71,7 +83,7 @@ def logout(rq):
 def MainPage(rq):
 	t = get_template("index.html")
 	login_text = login_info(rq)
-	ret = HttpResponse(t.render(Context({'login_text':login_text})))
+	ret = HttpResponse(t.render(Context({'request':rq})))
 	return ret
 
 def register(rq):
@@ -79,7 +91,7 @@ def register(rq):
 	login_text = login_info(rq)
 	ses = rq.session.items()
 	uname = rq.user.username
-	ret = HttpResponse(t.render(Context({'login_text':login_text, 'ses':ses, 'request':rq, 'uname':uname})))
+	ret = HttpResponse(t.render(Context({'ses':ses, 'request':rq, 'uname':uname})))
 	return ret;
 
 def cbase(rq):
@@ -87,4 +99,13 @@ def cbase(rq):
 	login_text = login_info(rq)
 	
 	ret = HttpResponse(t.render(Context({'login_text':login_text, 'request':rq})))
-	return ret;
+	return ret
+
+def database_controlpanel(rq):
+	t = get_template("db_cp.html")
+	login_text = login_info(rq)
+	usr = rq.user
+	
+	
+	ret = HttpResponse(t.render(Context({'login_text':login_text, 'request':rq, 'usr':usr})))
+	return ret
