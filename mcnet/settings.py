@@ -41,7 +41,11 @@ INSTALLED_APPS = (
     'allauth.account',
     'allauth.socialaccount',
 	'allauth.socialaccount.providers.facebook',
-)
+	'allauth.socialaccount.providers.vk',
+	'allauth.socialaccount.providers.google',
+	'allauth.socialaccount.providers.twitter',
+	'mcnet',
+	)
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

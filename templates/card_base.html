@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
 {% block contents %}
-Card base here!
+
+<form action="/cbase" method="get">
+	<input type="text" placeholder="English Name" {% if cname != "" %}value="{{ cname }}"{% endif %} name="name"></input>
+	<input type="submit" value="Search">
+</form>
+
+Search results:<br>
+{% for r in results %}
+<a href="/cardInfo?name={{ r }}">{{ r }}</a><br>
+{% endfor %}
+
 {% endblock %}

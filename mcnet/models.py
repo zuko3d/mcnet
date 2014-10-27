@@ -1,5 +1,4 @@
 from django.db import models
-from django.contrib.auth.models import AbstractUser
 
 class mspamlogs(models.Model):
 	text = models.TextField()
@@ -13,17 +12,14 @@ class MLogs(models.Model):
 	def __unicode__(self):
 		return self.text
 
-class CustomUser(AbstractUser):
-	#access flags
-	af = models.TextField()
-	def __unicode__(self):
-		return self.text
-
 class hmtgedition(models.Model):
 	name = models.TextField()
 	short = models.CharField(max_length=3)
 	cards_total = models.IntegerField()
-	id = models.IntegerField()
+	def __unicode__(self):
+		return self.name
 
 class hcard(models.Model):
 	engname = models.TextField()
+	def __unicode__(self):
+		return self.engname

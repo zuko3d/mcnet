@@ -1,9 +1,39 @@
 {% extends "base.html" %}
 
+{% block leftbar %}
+{% if request.user.is_superuser == True %}
+{% for spam in spams %}
+{{ spam.text }}<br>
+{% endfor %}
+{% endif %}
+{% endblock %}
+
 {% block contents %}
 {% if request.user.is_superuser == False %}
 Access denied!
 {% else %}
 CP will be here...
+Test = '{{ test }}'
+<a href="/importEditions">importEditions</a>
+<a href="/importCards">importCards</a>
+<table>
+{% for edition in editions %}
+<tr>
+<td>{{ edition.name }}</td>
+<td>{{ edition.short }}</td>
+<td>{{ edition.cards_total }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<!--
+<table>
+{% for card in cards %}
+<tr>
+<td>{{ card.engname }}</td>
+</tr>
+{% endfor %}
+</table>
+-->
 {% endif %}
 {% endblock %}

@@ -58,6 +58,9 @@
 		min-width: 100px;
 		display: table-cell;
 	}
+	.leftbar{
+		min-width: 100px;
+	}
 </style>
 
 <html style="height: 100%;width: 100%;">
@@ -86,15 +89,18 @@ Logged in as {{ request.user.username }}<br>
 Search will be here...
 </div>
 </div>
-</div>
 {% endblock %}
+<div class="leftbar">
+{% block leftbar %}
+{% endblock %}
+</div>
 <table id="content">
-<tr align="center"><td style="width: 940px;" valign="top">
+<tr align="center">
+<td style="width: 940px;" valign="top">
 {% block contents %}
 Contents block
 {% endblock %}
 {% block content %}
-Content block
 {% endblock %}
 </td></tr>
 </table>
