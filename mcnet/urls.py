@@ -5,6 +5,8 @@ urlpatterns = patterns('',
     # Examples:
 	url(r'^$', 'mcnet.main.MainPage'),
 	url(r'^/$', 'mcnet.main.MainPage'),
+	url(r'^index$', 'mcnet.main.MainPage'),
+	url(r'^index.php$', 'mcnet.main.MainPage'),
 	url(r'^login/$', 'mcnet.main.login'),
 	url(r'^logout/$', 'mcnet.main.logout'),
 	url(r'^register/$', 'mcnet.main.register'),
